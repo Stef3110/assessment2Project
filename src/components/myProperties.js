@@ -42,7 +42,7 @@ const MyProperties = () => {
     const handleHideProperty = async (propertyID) => {
         try {
             await axios.put(`http://localhost:3001/hideProperty/${propertyID}`);
-            fetchProperties(); // Refresh properties after hiding
+            fetchProperties();
         } catch (error) {
             console.error('Error hiding property:', error);
         }
@@ -51,7 +51,7 @@ const MyProperties = () => {
     const handleShowProperty = async (propertyID) => {
         try {
             await axios.put(`http://localhost:3001/showProperty/${propertyID}`);
-            fetchProperties(); // Refresh properties after showing
+            fetchProperties();
         } catch (error) {
             console.error('Error showing property:', error);
         }
